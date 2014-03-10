@@ -9,6 +9,9 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capistrano-bundler (1.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capistrano-s3 (0.2.7)
       aws-sdk
       capistrano
@@ -36,4 +39,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano-bundler
   capistrano-s3
