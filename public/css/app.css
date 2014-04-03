@@ -1,7 +1,8 @@
-h1#header {
+h1#header, #share-buttons {
   margin-left: auto;
   margin-right: auto;
   width:500px;
+  text-align: center;
 }
 
 .hangout {
@@ -34,4 +35,11 @@ h1#header {
 
 .hidden {
   display: none;
+}
+
+#share-buttons img {
+  width: 35px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
 }
