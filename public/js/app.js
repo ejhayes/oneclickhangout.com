@@ -12,6 +12,14 @@ var disqus_shortname = 'startagooglehangoutcom';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 
+var _urq = _urq || [];
+_urq.push(['initSite', '31e73147-15d9-4177-a0b0-2b213e3d6442']);
+(function() {
+var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
+ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
+})();
+
 $(window).load(function(){
   if ( chrome && ( $('#extension-is-installed').length == 0 ) ) {
     $('#install-button').removeClass('hidden');
