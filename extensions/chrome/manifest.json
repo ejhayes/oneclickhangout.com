@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "manifest_version": 2,
   "description": "This extension starts a google hangout.",
-  "homepage_url": "http://startagooglehangout.com",
+  "homepage_url": "http://oneclickhangout.com",
   "icons": {
     "16": "icons/hangout16.png",
     "48": "icons/hangout48.png",
@@ -27,8 +27,8 @@
   "content_scripts": [
     {
       "matches": [
-        "http://www.startagooglehangout.com/*",
-        "http://startagooglehangout.com/*"
+        "http://www.oneclickhangout.com/*",
+        "http://oneclickhangout.com/*"
       ],
       "js": [
         "src/inject/inject.js"
