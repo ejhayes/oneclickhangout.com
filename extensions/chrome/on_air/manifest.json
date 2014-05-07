@@ -28,7 +28,8 @@
     {
       "matches": [
         "http://www.oneclickhangout.com/*",
-        "http://oneclickhangout.com/*"
+        "http://oneclickhangout.com/*",
+        "http://ocgh.local/*"
       ],
       "js": [
         "src/inject/inject.js"
