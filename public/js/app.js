@@ -21,7 +21,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur
 })();
 
 $(window).load(function(){
-  if ( chrome && ( $('#extension-is-installed').length == 0 ) ) {
-    $('#install-button').removeClass('hidden');
+  if ( chrome && ( $('#hangout-extension-is-installed').length == 0 ) ) {
+    $('#hangout-install-button').removeClass('hidden');
+  }
+
+  if ( chrome && ( $('#onair-extension-is-installed').length == 0 ) ) {
+    $('#onair-install-button').removeClass('hidden');
   }
 });

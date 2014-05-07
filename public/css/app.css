@@ -6,11 +6,11 @@ h1#header, #share-buttons {
 }
 
 .hangout {
-  background-color: #1fa2ed;
+  background-color: #8A9B0F;
 }
 
 .hangout:hover {
-  background-color: #006FBA;
+  background-color: #718200;
 }
 
 .hangout_onair {
@@ -21,12 +21,20 @@ h1#header, #share-buttons {
   background-color: #CCA000;
 }
 
-.extension {
-  background-color: #dd4b39;
+.hangout_extension {
+  background-color: #3DA9BB;
 }
 
-.extension:hover {
-  background-color: #AA1806;
+.hangout_extension:hover {
+  background-color: #2490A2;
+}
+
+.onair_extension {
+  background-color: #E97F02;
+}
+
+.onair_extension:hover {
+  background-color: #D06600;
 }
 
 #disqus_thread {
