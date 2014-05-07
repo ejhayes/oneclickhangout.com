@@ -4,4 +4,5 @@ Contains the source code for oneclickhangout.com
 
 # preparing the extension
 
-    cd extensions && zip -r chrome.zip chrome
+    cd extensions/chrome && zip -r hangout.zip hangout/ && cd -
+    cd extensions/chrome && zip -r on_air.zip on_air/ && cd -
