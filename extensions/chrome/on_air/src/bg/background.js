@@ -1,3 +1,19 @@
+// Standard Google Universal Analytics code
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); // Note: https protocol here
+ 
+ga('create', 'UA-48659460-2', 'auto');
+ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+ga('require', 'displayfeatures');
+ga('send', 'pageview', '/onair-chrome-background.js');
+
+// report events
+var logEvent = function(category, action, value) {
+  ga('send', 'event', 'On-Air Extension - ' + category, action, value);
+}
+
 // redirect to a new hangout window
 function copyToClipboard( text ){
   var copyDiv = document.createElement('div');
@@ -48,6 +64,7 @@ chrome.browserAction.onClicked.addListener(function(activeTab)
 
         // copy link to clipboard
         copyToClipboard(hangout_url);
+        logEvent('onair', 'created', hangout_url);
 
         // send the notification
         chrome.notifications.create(notificationId, opt, function(notificationId){
