@@ -1,6 +1,6 @@
 {
   "name": "One Click Google On-Air Hangout",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "manifest_version": 2,
   "description": "This extension starts a google on-air hangout.",
   "homepage_url": "http://oneclickhangout.com",

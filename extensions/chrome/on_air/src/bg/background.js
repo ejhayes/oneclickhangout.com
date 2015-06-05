@@ -29,9 +29,10 @@ function copyToClipboard( text ){
 
 chrome.browserAction.onClicked.addListener(function(activeTab)
 {
+    var accountSelectionBaseUrl = "https://www.google.com/a/SelectSession?service=oz&continue=";
     var hangoutBaseUrl = "https://plus.google.com/hangouts/_/?hl=en&hcb=0&htt=My%20On%20Air%20Hangout&lm1=1&hscid=&hso=0";
 
-    chrome.tabs.create({ url: hangoutBaseUrl }, function(tab){
+    chrome.tabs.create({ url: accountSelectionBaseUrl + encodeURIComponent(hangoutBaseUrl) }, function(tab){
       // when the tab is created we are waiting to get a
       // valid hangout url, which may require the user to
       // login, so we will keep checking and waiting until
@@ -53,17 +54,19 @@ chrome.browserAction.onClicked.addListener(function(activeTab)
       
       // once the hangout is valid, do some useful stuff
       checkForValidHangout(1000, function(hangout_url){
+        var use_hangout_url = accountSelectionBaseUrl + encodeURIComponent(hangout_url)
+
         // prepare notification
         var opt = {
           type: "basic",
           title: "On-Air Hangout Created",
-          message: "The hangout url is: " + hangout_url + ". Copying to clipboard.",
+          message: "The hangout url is: " + use_hangout_url + ". Copying to clipboard.",
           iconUrl: "icons/hangout48.png"
         };
         var notificationId = "google_onair_hangout_notification";
 
         // copy link to clipboard
-        copyToClipboard(hangout_url);
+        copyToClipboard(use_hangout_url);
         logEvent('onair', 'created', hangout_url);
 
         // send the notification
